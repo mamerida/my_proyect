@@ -19,9 +19,14 @@ socket.on('open', function open() {
 socket.on('message', function catchMessage(data) {
     //convert message to JSON to work with him
     let message = JSON.parse(data) ;
+
+    //filter filter according to the message
     switch (message.event) {
         case "challenge":
             console.log('i recibe a challenger')
+        default:
+            console.log(message);
+            break;
     }
 });
 
