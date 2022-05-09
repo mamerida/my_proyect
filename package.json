@@ -14,10 +14,10 @@
     "jest": "^28.1.0"
   },
   "dependencies": {
-    "socket.io": "^4.5.0"
+    "dotenv": "^16.0.0",
+    "ws": "^8.6.0"
   },
-  "jest":{
-    "testEnvironment":"node"
+  "jest": {
+    "testEnvironment": "node"
   }
-  
 }
