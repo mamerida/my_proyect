@@ -11,11 +11,7 @@ const socket = new WebSocket(`wss://4yyity02md.execute-api.us-east-1.amazonaws.c
 
 
 //make listener
-socket.on('open', function open() {
-
-    
-    
-});
+socket.on('open', function open() {});
 
 //catch message
 socket.on('message', function catchMessage(data) {
