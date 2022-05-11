@@ -1,5 +1,37 @@
 
 
-exports.MakeBoard = (board) =>{
-     console.log(board)
+exports.makeBoard = (board) =>{
+    
+    if(!board){
+        return "Error to create board"
+    }
+
+    if(board.length != 289){
+        return "Error on length of board"
+    }
+
+    //convert string to array
+    const  messageBoard=  Array.from(board);
+
+    let finalBoard = [];
+    let index = 0;
+
+    //create columns of my bora
+    for(let i = 0; i < 17 ; i++){
+        
+        //create row of my board 
+        let row=[]
+        for(let u = 0; u <17 ; u ++){
+            row.push(messageBoard[index]);
+            index++;
+        }
+        finalBoard.push(row)
+    }
+
+    return finalBoard
+
 }
+
+
+    
+
