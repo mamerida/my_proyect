@@ -2,14 +2,9 @@
 
 exports.makeBoard = (board) =>{
     
-    if(!board){
-        return "Error to create board"
+    if(!board || board.length != 289){
+        return "Error"
     }
-
-    if(board.length != 289){
-        return "Error on length of board"
-    }
-
     //convert string to array
     const  messageBoard=  Array.from(board);
 

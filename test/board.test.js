@@ -1,4 +1,5 @@
-const board= '  N     N     N                                                                                                                                                                                                                                                                   S     S     S  ';
+const {makeBoard} = require("../board/board")
+const board="  N     N     N                                                                                                                                                                                                                                                                   S     S     S  ";
 
 const board_array = [
     [
@@ -104,3 +105,17 @@ const board_array = [
       ' ', ' '
     ]
   ];
+
+  describe("Make Board function" , ()=>{
+    test("create board with correct string", ()=>{
+        expect(makeBoard(board)).toStrictEqual(board_array)
+    } )
+
+    test("create board without string", ()=>{
+        expect(makeBoard()).toBe("Error")
+    } )
+
+    test("create board wrong string", ()=>{
+        expect(makeBoard("hello world")).toBe("Error")
+    } )
+  })
