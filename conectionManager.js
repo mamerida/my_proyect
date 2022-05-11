@@ -2,6 +2,8 @@
 //and if Its necesarry change on environment i will can change the token or anything in .env fije 
 require('dotenv').config()
 const {WebSocket} = require("ws")
+const {acceptChallenge} = require("./response/challengerResponse");
+const {myTurn} = require("./response/myTurnResponse");
 
 
 //URL OF WEBSOCKET
@@ -22,8 +24,14 @@ socket.on('message', function catchMessage(data) {
 
     //filter filter according to the message
     switch (message.event) {
+
         case "challenge":
-            console.log('i recibe a challenger')
+            const response = acceptChallenge(message);
+            socket.send(response);
+
+        case "your_turn":
+            myTurn(message);
+
         default:
             console.log(message);
             break;
