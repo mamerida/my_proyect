@@ -18,6 +18,7 @@
     "ws": "^8.6.0"
   },
   "jest": {
-    "testEnvironment": "node"
+    "displayName": "dom",
+    "testEnvironment": "jest-environment-jsdom",
   }
 }
