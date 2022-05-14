@@ -3,7 +3,7 @@
 exports.makeBoard = (board) =>{
     
     if(!board || board.length != 289){
-        return "Error"
+        throw new Error("Error in board string")
     }
     //convert string to array
     const  messageBoard=  Array.from(board);
@@ -27,15 +27,6 @@ exports.makeBoard = (board) =>{
 
 }
 
-
-message = json.dumps(
-    {
-        'action': action,
-        'data': data,
-        }
-    )
-print(message)
-await websocket.send(message)
 
 
 

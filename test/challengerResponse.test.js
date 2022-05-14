@@ -34,7 +34,7 @@ describe("Accept Challenge" , ()=>{
     })
 
     test("reject challenger without message" , ()=>{
-        expect(acceptChallenge()).toBe()
+        expect(()=>{acceptChallenge()}).toThrow(new Error("Error missing parameters to send"))
     })
 
     test("reject challenger with other opponent " , ()=>{

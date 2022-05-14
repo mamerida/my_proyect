@@ -112,10 +112,10 @@ const board_array = [
     } )
 
     test("create board without string", ()=>{
-        expect(makeBoard()).toBe("Error")
+      expect(()=>{makeBoard()}).toThrow(new Error("Error in board string"))
     } )
 
     test("create board wrong string", ()=>{
-        expect(makeBoard("hello world")).toBe("Error")
+      expect(()=>{makeBoard("hello")}).toThrow(new Error("Error in board string"))
     } )
   })
