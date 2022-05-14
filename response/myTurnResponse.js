@@ -2,8 +2,10 @@
 //function convert string to matrix
 const {makeBoard} = require('../board/board');
 
-//fuction that select the best option 
-const {chooseOption} = require('../chooseOption/chooseOption');
+//fuction returns pouns position
+const {viewPowns} = require('../utils/viewPiecePosition');
+
+const {lookMoves} = require('../utils/lookMoves');
 
 //my turns manages the board, chose the best option and send the response 
 exports.myTurn = (message) =>{
@@ -30,9 +32,15 @@ exports.myTurn = (message) =>{
     }
 
     //makes board from string 
-    const board = makeBoard(message.data.board)
+    const board = makeBoard(message.data.board);
 
-    const ResponseWs = chooseOption(message , board )
+    //obtain piece position 
+    const position = viewPowns(board, message);
+
+    //look for possible moves
+    const positionMoves= lookMoves(position);
+
+    console.log(positionMoves)
 
 
 }
