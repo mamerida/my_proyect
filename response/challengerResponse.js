@@ -5,7 +5,7 @@ exports.acceptChallenge = (message) =>{
 
     //comprobe challenge_id to prevent send a response without challenge_id
     if(!message || !message.data.challenge_id){
-        return;
+        throw new Error("Error missing parameters to send ");
     }
 
     //use if to prevent challenge of other partner 

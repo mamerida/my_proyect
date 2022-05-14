@@ -28,5 +28,18 @@ exports.makeBoard = (board) =>{
 }
 
 
+message = json.dumps(
+    {
+        'action': action,
+        'data': data,
+        }
+    )
+print(message)
+await websocket.send(message)
+
+
+
+
+
     
 
