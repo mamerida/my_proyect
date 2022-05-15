@@ -11,7 +11,7 @@ exports.makeBoard = (board) =>{
     let finalBoard = [];
     let index = 0;
 
-    //create columns of my bora
+    //create columns of my board
     for(let i = 0; i < 17 ; i++){
         
         //create row of my board 

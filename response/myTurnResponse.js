@@ -5,7 +5,12 @@ const {makeBoard} = require('../board/board');
 //fuction returns pouns position
 const {viewPowns} = require('../utils/viewPiecePosition');
 
+//view position in board and return posible moves
 const {lookMoves} = require('../utils/lookMoves');
+
+//search wall and stydy special moves
+const {searchWalls} = require('../utils/searchWalls');
+
 
 //my turns manages the board, chose the best option and send the response 
 exports.myTurn = (message) =>{
@@ -37,10 +42,13 @@ exports.myTurn = (message) =>{
     //obtain piece position 
     const position = viewPowns(board, message);
 
-    //look for possible moves
+    //look for possible moves in table
     const positionMoves= lookMoves(position);
 
-    console.log(positionMoves)
+    //look around for each pown and verify walls and other team pawns
+    const positionsWithOutWalls = searchWalls(board,positionMoves,message.data.side);
+
+    console.log(positionsWithOutWalls);
 
 
 }
