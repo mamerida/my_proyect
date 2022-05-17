@@ -28,8 +28,6 @@ exports.canJump = (board,positions,side) =>{
             //Be a wall on left side 
             }else if (board[pown.row+1][pown.column+1] == " "){
                 finishMoves.upLeft = pointsOfMoves.upLeft;
-            }else{
-                
             }
         }
 

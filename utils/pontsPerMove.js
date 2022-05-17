@@ -1,12 +1,12 @@
 
 exports.pointsOfMoves = {
-    up:2,
-    upJump:3,
-    upLeft:2,
-    upRigth:2,
-    left:1,
-    rigth:1,
-    down:-1,
-    downLeft:-1,
-    dowRigth:-1,
+    up:"up",
+    upJump:"upJump",
+    upLeft:"upLeft",
+    upRigth:"upRigth",
+    left:"left",
+    rigth:"rigth",
+    down:"down",
+    downLeft:"downLeft",
+    dowRigth:"dowRigth",
 }

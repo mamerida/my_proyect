@@ -17,6 +17,8 @@ const {canJump} = require('../logic/canJump');
 //recibe powns and return best option
 const {selectBestOption} = require('../logic/selectBestOption');
 
+const {findMove} = require('../logic/findMove');
+
 //my turns manages the board, chose the best option and send the response 
 exports.myTurn = (message) =>{
 
@@ -56,7 +58,12 @@ exports.myTurn = (message) =>{
     //finally look if i can jump or make diagonal move
     const finalsMoves = canJump(board,positionsWithOutWalls,message.data.side);
 
+    //of all of the option filter according to moves and position on board 
+    const bestOption = selectBestOption(finalsMoves);
 
+    console.log(bestOption);
+
+    const messageToSend = findMove(bestOption)
 
 }
 
