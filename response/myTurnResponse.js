@@ -2,6 +2,8 @@
 //function convert string to matrix
 const {makeBoard} = require('../board/board');
 
+const {makeRotateBoard} = require('../board/rotateBoard');
+
 //fuction returns pouns position
 const {viewPowns} = require('../logic/viewPiecePosition');
 
@@ -35,7 +37,7 @@ exports.myTurn = (message) =>{
             "score_2": 0.0,
             "walls": 10.0,
             "score_1": 0.0,
-            "side": "N",
+            "side": "S",
             "remaining_moves": 50.0,
             "board": "  N     N     N                                                                                                                                                                                                                                                                   S     S     S  ",
             "turn_token": "087920d0-0e6b-4716-9e77-add550a006aa",
@@ -44,7 +46,14 @@ exports.myTurn = (message) =>{
     }
 
     //makes board from string 
-    const board = makeBoard(message.data.board);
+    let useRotateBoard= false;
+    let board =[];
+    if(message.data.side == "S"){
+        useRotateBoard=true;
+        board = makeRotateBoard(message.data.board);
+    }else{
+        board = makeBoard(message.data.board);
+    }
 
     //obtain piece position 
     const position = viewPowns(board, message);
@@ -61,9 +70,7 @@ exports.myTurn = (message) =>{
     //of all of the option filter according to moves and position on board 
     const bestOption = selectBestOption(finalsMoves);
 
-    console.log(bestOption);
-
-    const messageToSend = findMove(bestOption)
+    const messageToSend = findMove(message,bestOption,useRotateBoard)
 
 }
 

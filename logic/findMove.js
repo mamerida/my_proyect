@@ -1,5 +1,5 @@
-exports.findMove = (finalsMoves) =>{
-    
+const {movePawn} = require('../moves/movePawn')
+exports.findMove = (message,finalsMoves) =>{
     // "game_id": message.data.game_id,
     //         "turn_token": message.data.turn_token,
     //         "from_row": from_row,
@@ -7,7 +7,8 @@ exports.findMove = (finalsMoves) =>{
     //         "to_row": to_row,
     //         "to_col": to_col
 
-    // switch(finalsMoves.moves){
-    //     case "upJump":
-    // }
+    switch(finalsMoves.moves){
+        case "upJump":
+            
+    }
 }
