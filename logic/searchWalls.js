@@ -1,48 +1,51 @@
 exports.searchWalls = (board,positionMoves,side) =>{
 
     const viewWalls = (pown,finishMoves,side,board,move) =>{
-            
+
+        //make possible moves object
+        if(move == "up"){
+            finishMoves.up = true;
+        }
+        if(move == "left"){
+            finishMoves.left = true;
+        }
+        if(move == "rigth"){
+            finishMoves.rigth = true;
+        }
+        if(move == "down"){
+            finishMoves.down = true;
+        }
+
         //if i want move piece forward . I need verify walls 
         if(move == "up" && board[pown.row+1][pown.column] == "-"){
-            return finishMoves;
+            delete finishMoves.up;
         }
         if(move == "left" && board[pown.row][pown.column+1] == "|"){
-            return finishMoves;
+            delete finishMoves.left;
         }
         if(move == "rigth" && board[pown.row][pown.column-1] == "|" ){
-            return finishMoves;
+            delete finishMoves.rigth;
         }
         if(move == "down" && board[pown.row-1][pown.column] == "-" ){
-            return finishMoves;
+            delete finishMoves.down;
         }
 
         //if i want move piece forward . I need verify my other pieces
         if(move == "up" && board[pown.row+2][pown.column] == side){
-            return finishMoves;
+            delete finishMoves.up;
         }
         if(move == "left" && board[pown.row][pown.column+2] == side){
-            return finishMoves;
+            delete finishMoves.left;
         }
         if(move == "rigth" && board[pown.row][pown.column-2] == side){
-            return finishMoves;
+            delete finishMoves.rigth;
         }
         if(move == "down" && board[pown.row-2][pown.column] == side){
-            return finishMoves;
+            return finishMoves.down;
         }
 
-        //make possible moves object
-        if(move == "up"){
-        return finishMoves.up = true;
-        }
-        if(move == "left"){
-        return finishMoves.left = true;
-        }
-        if(move == "rigth"){
-        return finishMoves.rigth = true;
-        }
-        if(move == "down"){
-        return finishMoves.down = true;
-        }
+        return finishMoves;
+
 
     }
     
