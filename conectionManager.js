@@ -15,7 +15,7 @@ socket.on('open', function open() {
 
     //catch message
     socket.on('message',  async function  catchMessage(data) {
-
+        
         try{
             //convert message to JSON to work with him
             let message = JSON.parse(data) ;
@@ -28,7 +28,9 @@ socket.on('open', function open() {
                     break;
     
                 case "your_turn":
-                    myTurn(message);
+                    console.log(message);
+                    const responseMove = FactoryServerEvent.myTurnResponse(message);
+                    socket.send(responseMove);
                     break;
     
                 case "list_users":

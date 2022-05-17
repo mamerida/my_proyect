@@ -26,23 +26,7 @@ exports.myTurn = (message) =>{
 
     //catch without message 
     if(!message){
-        return;
-    }
-     
-    message ={
-        "event": "your_turn",
-        "data": {
-            "player_2": "uno",
-            "player_1": "dos",
-            "score_2": 0.0,
-            "walls": 10.0,
-            "score_1": 0.0,
-            "side": "S",
-            "remaining_moves": 50.0,
-            "board": "  N     N     N                                                                                                                                                                                                                                                                   S     S     S  ",
-            "turn_token": "087920d0-0e6b-4716-9e77-add550a006aa",
-            "game_id": "ab16e71c-caeb-11eb-975e-0242c0a80004"
-        }
+        throw new Error("Error need a message");
     }
 
     //makes board from string 
@@ -70,8 +54,8 @@ exports.myTurn = (message) =>{
     //of all of the option filter according to moves and position on board 
     const bestOption = selectBestOption(finalsMoves);
 
-    const messageToSend = findMove(message,bestOption,useRotateBoard)
-
+    //make message to send
+    const messageToSend = findMove(message,bestOption,useRotateBoard);
+    console.log(messageToSend);
+    return messageToSend
 }
-
-this.myTurn("hola")
