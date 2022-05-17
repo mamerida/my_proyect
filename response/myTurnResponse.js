@@ -56,7 +56,6 @@ exports.myTurn = (message) =>{
     //finally look if i can jump or make diagonal move
     const finalsMoves = canJump(board,positionsWithOutWalls,message.data.side);
 
-    console.log(finalsMoves)
 
 
 }
