@@ -3,14 +3,19 @@
 const {makeBoard} = require('../board/board');
 
 //fuction returns pouns position
-const {viewPowns} = require('../utils/viewPiecePosition');
+const {viewPowns} = require('../logic/viewPiecePosition');
 
 //view position in board and return posible moves
-const {lookMoves} = require('../utils/lookMoves');
+const {lookMoves} = require('../logic/lookMoves');
 
 //search wall and stydy special moves
-const {searchWalls} = require('../utils/searchWalls');
+const {searchWalls} = require('../logic/searchWalls');
 
+//view posibility to jump or move diagonally
+const {canJump} = require('../logic/canJump');
+
+//recibe powns and return best option
+const {selectBestOption} = require('../logic/selectBestOption');
 
 //my turns manages the board, chose the best option and send the response 
 exports.myTurn = (message) =>{
@@ -48,7 +53,10 @@ exports.myTurn = (message) =>{
     //look around for each pown and verify walls and other team pawns
     const positionsWithOutWalls = searchWalls(board,positionMoves,message.data.side);
 
-    console.log(positionsWithOutWalls);
+    //finally look if i can jump or make diagonal move
+    const finalsMoves = canJump(board,positionsWithOutWalls,message.data.side);
+
+    console.log(finalsMoves)
 
 
 }
