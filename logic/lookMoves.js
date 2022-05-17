@@ -12,19 +12,19 @@ exports.lookMoves = (position) =>{
         powns.moves = {};
         //verifi moves 
         if(powns.row != 16){
-            powns.moves.up = true;
+            powns.moves.up = "up";
         }
 
         if(powns.row != 0){
-            powns.moves.down = true;
+            powns.moves.down =  "down";
         }
 
         if(powns.column != 16){
-            powns.moves.left = true;
+            powns.moves.left = "left";
         }
 
         if(powns.column != 0){
-            powns.moves.rigth = true;
+            powns.moves.rigth = "rigth";
         }
     });
 

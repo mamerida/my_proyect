@@ -2,20 +2,6 @@ exports.searchWalls = (board,positionMoves,side) =>{
 
     const viewWalls = (pown,finishMoves,side,board,move) =>{
 
-        //make possible moves object
-        if(move == "up"){
-            finishMoves.up = true;
-        }
-        if(move == "left"){
-            finishMoves.left = true;
-        }
-        if(move == "rigth"){
-            finishMoves.rigth = true;
-        }
-        if(move == "down"){
-            finishMoves.down = true;
-        }
-
         //if i want move piece forward . I need verify walls 
         if(move == "up" && board[pown.row+1][pown.column] == "-"){
             delete finishMoves.up;
@@ -53,6 +39,7 @@ exports.searchWalls = (board,positionMoves,side) =>{
     positionMoves.forEach(pown => {
         const finishMoves={}
         //iterate por moves
+        console.log(pown)
         for (const moves  in pown.moves) {
                 viewWalls(pown,finishMoves,side,board,moves)
         };
