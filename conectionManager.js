@@ -29,14 +29,13 @@ let moves = 0;
                     //to be able to insert walls generated a turn counter
                     console.log(message);
                     let responseMove = ""
-                    if(moves == 5 && message.data.walls != 0 ){
+                    if(moves == 3 && message.data.walls != 0 ){
                         responseMove = FactoryServerEvent.myTurnResponseWall(message);
                         moves = 0; 
                     }else{
                         responseMove = FactoryServerEvent.myTurnResponsePawn(message);
                         moves++;
                     }
-                    console.log(responseMove);
                     socket.send(responseMove);
                     break;
     
