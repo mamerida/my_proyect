@@ -3,7 +3,7 @@
 
 const {acceptChallenge} = require('./response/challengerResponse');
 const {myTurn} = require('./response/myTurnResponse');
-const {myTurnWall} = require('./response/myTurnResponse');
+const {myTurnWall} = require('./response/myTurnWall');
 
 
 

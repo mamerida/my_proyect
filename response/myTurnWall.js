@@ -7,5 +7,5 @@ exports.myTurnWall = (message) =>{
     //determine my side
     const my_side = message.data.side;
     const other_side = message.data.side  == "S" ? "N" : "S";
-    
+    console.log("my_side",my_side,"Other_side",other_side)
 }
