@@ -32,7 +32,6 @@ exports.myTurn = (message) =>{
     if(!message){
         throw new Error("Error need a message");
     }
-
     //makes board from string 
     let useRotateBoard= false;
     let board =[];
@@ -60,11 +59,8 @@ exports.myTurn = (message) =>{
 
     //of all of the option filter according to moves and position on board 
     const bestOption = selectBestOption(finalsMoves);
-    console.log("mejor peon a seleccionar",bestOption);
 
     //make message to send
     const messageToSend = findMove(message,bestOption,useRotateBoard);
-    console.log("mensaje a enviar",messageToSend);
-    console.log("----------------------------------------------")
     return messageToSend
 }

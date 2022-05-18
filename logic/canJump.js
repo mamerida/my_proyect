@@ -16,15 +16,15 @@ exports.canJump = (board,positions,side) =>{
         // can i do diagonal movement
         // verifi if there are opponet pawn and a wall
 
-        // if(moves == "up" && pown.row <=12  && (board[(pown.row + 2)][pown.column] != side ||  board[(pown.row + 2)][pown.column] != " ") && board[(pown.row + 3)][pown.column] != " " ){ 
-        //     //Be a wall on rigth side 
-        //     if(board[pown.row + 1 ][pown.column - 1 ] == " " ){
-        //         finishMoves.upRigth = pointsOfMoves.upRigth;
-        //     //Be a wall on left side 
-        //     }else if (board[pown.row + 1 ][pown.column + 1 ] == " "){
-        //         finishMoves.upLeft = pointsOfMoves.upLeft;
-        //     }
-        // }
+        if(moves == "up" && pown.row <=12  && (board[(pown.row + 2)][pown.column] != side ||  board[(pown.row + 2)][pown.column] != " ") && board[(pown.row + 3)][pown.column] != " " ){ 
+            //Be a wall on rigth side 
+            if(board[pown.row + 1 ][pown.column - 1 ] == " " ){
+                finishMoves.upRigth = pointsOfMoves.upRigth;
+            //Be a wall on left side 
+            }else if (board[pown.row + 1 ][pown.column + 1 ] == " "){
+                finishMoves.upLeft = pointsOfMoves.upLeft;
+            }
+        }
 
         if(moves == "rigth"){
             finishMoves.rigth = pointsOfMoves.rigth;

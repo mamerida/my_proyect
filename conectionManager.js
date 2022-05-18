@@ -8,14 +8,12 @@ const {FactoryServerEvent} = require("./factoryEvents");
 
 //URL OF WEBSOCKET
 const socket = new WebSocket(`wss://4yyity02md.execute-api.us-east-1.amazonaws.com/ws?token=${process.env.TOKEN}`);
-
-
+let moves = 0;
 //make listener
 socket.on('open', function open() {
 
     //catch message
     socket.on('message',  async function  catchMessage(data) {
-        
         try{
             //convert message to JSON to work with him
             let message = JSON.parse(data) ;
@@ -28,8 +26,16 @@ socket.on('open', function open() {
                     break;
     
                 case "your_turn":
-                    console.log("score 1",message.data.score_1, "score_2",message.data.score_2);
-                    const responseMove = FactoryServerEvent.myTurnResponse(message);
+                    //to be able to insert walls generated a turn counter
+                    let responseMove = ""
+                    if(moves<5){
+                        responseMove = FactoryServerEvent.myTurnResponseWall(message);
+                        moves++;
+                    }else{
+                        responseMove = FactoryServerEvent.myTurnResponsePawn(message);
+                        moves = 0;
+                    }
+                    
                     socket.send(responseMove);
                     break;
     
