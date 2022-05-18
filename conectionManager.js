@@ -8,17 +8,16 @@ const {FactoryServerEvent} = require("./factoryEvents");
 
 //URL OF WEBSOCKET
 const socket = new WebSocket(`wss://4yyity02md.execute-api.us-east-1.amazonaws.com/ws?token=${process.env.TOKEN}`);
-let moves = 0;
+
 //make listener
 socket.on('open', function open() {
-
+let moves = 0;
     //catch message
     socket.on('message',  async function  catchMessage(data) {
         try{
             //convert message to JSON to work with him
             let message = JSON.parse(data) ;
             //filter filter according to the message
-            console.log("game id",message.data.game_id,"score1",message.data.score_1, "  score2" , message.data.score_2);
             switch (message.event) {
 
                 case "challenge":
@@ -28,15 +27,16 @@ socket.on('open', function open() {
                 
                 case "your_turn":
                     //to be able to insert walls generated a turn counter
+                    console.log(message);
                     let responseMove = ""
                     if(moves == 5 && message.data.walls != 0 ){
-                        console.log("paseo por los muros")
                         responseMove = FactoryServerEvent.myTurnResponseWall(message);
                         moves = 0; 
                     }else{
                         responseMove = FactoryServerEvent.myTurnResponsePawn(message);
                         moves++;
                     }
+                    console.log(responseMove);
                     socket.send(responseMove);
                     break;
     

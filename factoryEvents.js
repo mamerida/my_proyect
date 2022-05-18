@@ -16,7 +16,7 @@ const myTurnResponsePawn = (message) =>{
 };
 
 const userList = (message) =>{
-    console.log(message)
+    // console.log(message)
 }
 
 const myTurnResponseWall = (message) =>{

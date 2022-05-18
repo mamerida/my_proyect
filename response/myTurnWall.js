@@ -26,6 +26,8 @@ exports.myTurnWall = (message) =>{
     const position = viewPowns(board, message);
 
     let nearestPawn  = nearPawn(position,other_side);
+
+    console.log(nearestPawn);
     
     //comprobe if i can put a wall front of selected pawn
     const isClear  = viewLine(nearestPawn,board,other_side); // return true or false 
@@ -37,8 +39,8 @@ exports.myTurnWall = (message) =>{
 
     if(other_side == "S"){
         //message,row,col,direction
-        return putWall(message,nearestPawn.row - 1 ,nearestPawn.column ,"h")
+        return putWall(message,parseInt((nearestPawn.row /2)- 1) ,parseInt(nearestPawn.column/2),"h")
     }
-    return putWall(message,nearestPawn.row,nearestPawn.column ,"h")
+    return putWall(message,parseInt(nearestPawn.row /2) ,parseInt(nearestPawn.column/2),"h")
 
 }

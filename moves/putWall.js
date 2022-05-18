@@ -1,27 +1,23 @@
-exports.putWall = (message,row,col,direction)=>{
+exports.putWall = (message,rowTo,colTo,direction)=>{
 
     //Catch and returns erros 
-    if(!message || !row || !col || !direction ){
-        return "Error missing elements "
+    if(!message || rowTo == null  || colTo == null || !direction ){
+        throw new Error("Error missing elements ") 
     }
     // prevent pass letters or simbos to server 
-    if(!isNaN(row) || !isNaN(col)){
-        return "Error some of the coordinates are not numbers "
-    }
-
-    //prevent sent other caractacter that h or v in direction
-    if(direction != "h" || direction !="v"){
-        return "Error on directions "
+    if(isNaN(rowTo) || isNaN(colTo)){
+        throw new Error("Error some of the coordinates are not numbers")
     }
 
     //return JSON with accion 
     return JSON.stringify({
-        action: "move", 
+        action: "wall", 
         data: {
             "game_id": message.data.game_id,
-            "row": row,
-            "col": col,
-            "direction": direction,
-        }
+            "turn_token": message.data.turn_token,
+            "row": rowTo,
+            "col": colTo,
+            "orientation": direction,
+        }   
     })
 }
