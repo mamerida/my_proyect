@@ -1,4 +1,4 @@
-exports.putWall = ({message,row,col,direction})=>{
+exports.putWall = (message,row,col,direction)=>{
 
     //Catch and returns erros 
     if(!message || !row || !col || !direction ){

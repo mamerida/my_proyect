@@ -18,24 +18,25 @@ socket.on('open', function open() {
             //convert message to JSON to work with him
             let message = JSON.parse(data) ;
             //filter filter according to the message
+            console.log("game id",message.data.game_id,"score1",message.data.score_1, "  score2" , message.data.score_2);
             switch (message.event) {
 
                 case "challenge":
                     const response = FactoryServerEvent.acceptChallengeResponse(message);
                     socket.send(response);
                     break;
-    
+                
                 case "your_turn":
                     //to be able to insert walls generated a turn counter
                     let responseMove = ""
                     if(moves == 5 && message.data.walls != 0 ){
+                        console.log("paseo por los muros")
                         responseMove = FactoryServerEvent.myTurnResponseWall(message);
                         moves = 0; 
                     }else{
                         responseMove = FactoryServerEvent.myTurnResponsePawn(message);
                         moves++;
                     }
-                    console.log(responseMove);
                     socket.send(responseMove);
                     break;
     

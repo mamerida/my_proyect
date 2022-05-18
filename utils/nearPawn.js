@@ -12,7 +12,7 @@ exports.nearPawn= (position,side) =>{
     //verify if my opponet have S i will put a wall front of  pawn with smaller row
     if(side == "S"){
         position.forEach(pawn => {
-            if(nearPown.row> pawn.row){
+            if( nearPown.column == 0 || nearPown.row == 16 || nearPown.row > pawn.row){
                 nearPown = pawn;
             }
         });
@@ -20,7 +20,7 @@ exports.nearPawn= (position,side) =>{
 
     if(side == "N"){
         position.forEach(pawn => {
-            if(nearPown.row< pawn.row){
+            if(nearPown.column == 0 || nearPown.row  == 0 || nearPown.row < pawn.row){
                 nearPown = pawn;
             }
         });
