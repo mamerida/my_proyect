@@ -1,12 +1,29 @@
+//function convert string to matrix
+const {makeBoard} = require('../board/board');
+//fuction returns pouns position
+const {viewPowns} = require('../logic/viewPiecePosition');
+//fuction return nearest pawn 
+const {nearPawn} = require('../utils/nearPawn');
+
+
+
 exports.myTurnWall = (message) =>{
     //catch without message 
     if(!message){
         throw new Error("Error need a message");
     }
+    //make my board
+    const board = makeBoard(message.data.board);
 
-    //determine my side
-    const my_side = message.data.side;
-    //hello world asdasdasdasdasd
+    //determine my opponent side
     const other_side = message.data.side  == "S" ? "N" : "S";
-    console.log("my_side",my_side,"Other_side",other_side)
+
+    //obtain enemy piece position 
+    message.data.side = other_side;
+    const position = viewPowns(board, message);
+
+    const nearestPawn  = nearPawn(position,other_side);
+
+    console.log(nearestPawn);
+
 }

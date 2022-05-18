@@ -28,13 +28,12 @@ socket.on('open', function open() {
                 case "your_turn":
                     //to be able to insert walls generated a turn counter
                     let responseMove = ""
-                    if(moves<5){
+                    if(moves == 5 && message.data.walls != 0 ){
+                        responseMove = FactoryServerEvent.myTurnResponseWall(message);
+                        moves = 0; 
+                    }else{
                         responseMove = FactoryServerEvent.myTurnResponsePawn(message);
                         moves++;
-                    }else{
-                        console.log("paso por aca");
-                        responseMove = FactoryServerEvent.myTurnResponseWall(message);
-                        moves = 0;
                     }
                     console.log(responseMove);
                     socket.send(responseMove);
