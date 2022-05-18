@@ -5,9 +5,9 @@ exports.canJump = (board,positions,side) =>{
     const viewotherPieces = (finishMoves,side,board,moves,pown)=>{
 
         //see my next square and junm
-        if(moves == "up" && pown.row <= 12 && board[pown.row + 2][pown.column] != " "){
-            finishMoves.upJump = pointsOfMoves.upJump;
-        }
+        // if(moves == "up" && pown.row <= 12 && board[pown.row + 2][pown.column] != " "){
+        //     finishMoves.upJump = pointsOfMoves.upJump;
+        // }
 
         // can i do diagonal movement
         // verifi if there are opponet pawn and a wall
@@ -21,7 +21,9 @@ exports.canJump = (board,positions,side) =>{
         //         finishMoves.upLeft = pointsOfMoves.upLeft;
         //     }
         // }
-
+        // if(moves == "up" && pown.row <= 14 ){
+        //     finishMoves.up = pointsOfMoves.up;
+        // }
 
         if(moves == "rigth"){
             finishMoves.rigth = pointsOfMoves.rigth;
@@ -41,14 +43,13 @@ exports.canJump = (board,positions,side) =>{
     
 
     positions.forEach(pown => {
-        const finishMoves={}
+        let finishMoves={};
         //iterate por moves
-        for (const moves  in pown.moves) {
+        for (const moves  in pown.moves) {         
              viewotherPieces(finishMoves,side,board,moves,pown)
         };
         pown.moves = finishMoves;
         
     });
-
     return(positions);
 }

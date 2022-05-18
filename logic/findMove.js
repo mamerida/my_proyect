@@ -4,7 +4,6 @@ exports.findMove = (message,finalsMoves,useRotateBoard) =>{
     let from_col = parseInt(finalsMoves.column/2);
     let to_row = 0;
     let to_col = 0;
-    console.log(finalsMoves)
     switch(true){
         case finalsMoves.moves.upJump == 'upJump':
             to_row = from_row + 2;

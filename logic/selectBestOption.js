@@ -17,7 +17,7 @@ exports.selectBestOption = (finalsMoves) =>{
             moveLeftOrRigth.push(pawn)
         }
 
-        if(moveDown){
+        if(pawn.moves.down){
             moveDown.push(pawn)
         }
     });
@@ -28,13 +28,13 @@ exports.selectBestOption = (finalsMoves) =>{
     } 
 
     //in other case move to rigth or left 
-    if( !canAdvance && moveLeftOrRigth.length > 0){
-        pieceToMove = bestPown(canAdvance);
+    if( canAdvance.length == 0 && moveLeftOrRigth.length > 0){
+        pieceToMove = bestPown(moveLeftOrRigth);
     } 
 
     //or moveDown
-    if(!canAdvance && !moveLeftOrRigth && moveDown.length > 0){
-        pieceToMove = bestPown(canAdvance);
+    if(canAdvance.length == 0 && moveLeftOrRigth.length == 0 && moveDown.length > 0){
+        pieceToMove = bestPown(moveDown);
    } 
 
     return pieceToMove;

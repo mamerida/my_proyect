@@ -28,7 +28,6 @@ socket.on('open', function open() {
                     break;
     
                 case "your_turn":
-                    console.log(message);
                     const responseMove = FactoryServerEvent.myTurnResponse(message);
                     socket.send(responseMove);
                     break;
@@ -36,7 +35,9 @@ socket.on('open', function open() {
                 case "list_users":
                     FactoryServerEvent.userList(message);
                     break;
-
+                case "game_over":
+                    console.log("Game Over");
+                    break;
                 default:
                     console.log(message);
                     break;

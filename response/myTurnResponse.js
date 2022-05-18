@@ -41,10 +41,10 @@ exports.myTurn = (message) =>{
 
     //obtain piece position 
     const position = viewPowns(board, message);
-
+    
     //look for possible moves in table
     const positionMoves= lookMoves(position);
-
+    
     //look around for each pown and verify walls and other team pawns
     const positionsWithOutWalls = searchWalls(board,positionMoves,message.data.side);
 
@@ -56,6 +56,6 @@ exports.myTurn = (message) =>{
 
     //make message to send
     const messageToSend = findMove(message,bestOption,useRotateBoard);
-    console.log(messageToSend);
+
     return messageToSend
 }
