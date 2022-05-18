@@ -13,11 +13,15 @@ const {lookMoves} = require('../logic/lookMoves');
 //search wall and stydy special moves
 const {searchWalls} = require('../logic/searchWalls');
 
+//considere if a enemy pawn is opposite me and be in edge of board
+const {EdgeOfTable} = require('../logic/EdgeOfTable')
+
 //view posibility to jump or move diagonally
 const {canJump} = require('../logic/canJump');
 
 //recibe powns and return best option
 const {selectBestOption} = require('../logic/selectBestOption');
+
 
 const {findMove} = require('../logic/findMove');
 
@@ -48,14 +52,19 @@ exports.myTurn = (message) =>{
     //look around for each pown and verify walls and other team pawns
     const positionsWithOutWalls = searchWalls(board,positionMoves,message.data.side);
 
+    //look around for each pown and verify walls and other team pawns
+    const positionsSpecialCondition = EdgeOfTable(board,positionsWithOutWalls);
+
     //finally look if i can jump or make diagonal move
-    const finalsMoves = canJump(board,positionsWithOutWalls,message.data.side);
+    const finalsMoves = canJump(board,positionsSpecialCondition,message.data.side);
 
     //of all of the option filter according to moves and position on board 
     const bestOption = selectBestOption(finalsMoves);
+    console.log("mejor peon a seleccionar",bestOption);
 
     //make message to send
     const messageToSend = findMove(message,bestOption,useRotateBoard);
-
+    console.log("mensaje a enviar",messageToSend);
+    console.log("----------------------------------------------")
     return messageToSend
 }

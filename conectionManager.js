@@ -28,6 +28,7 @@ socket.on('open', function open() {
                     break;
     
                 case "your_turn":
+                    console.log("score 1",message.data.score_1, "score_2",message.data.score_2);
                     const responseMove = FactoryServerEvent.myTurnResponse(message);
                     socket.send(responseMove);
                     break;
@@ -39,7 +40,6 @@ socket.on('open', function open() {
                     console.log("Game Over");
                     break;
                 default:
-                    console.log(message);
                     break;
             }
 
