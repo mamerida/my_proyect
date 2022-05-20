@@ -19,12 +19,10 @@ let moves = 0;
             let message = JSON.parse(data) ;
             //filter filter according to the message
             switch (message.event) {
-
                 case "challenge":
                     const response = FactoryServerEvent.acceptChallengeResponse(message);
                     socket.send(response);
                     break;
-                
                 case "your_turn":
                     //to be able to insert walls generated a turn counter
                     let responseMove = ""

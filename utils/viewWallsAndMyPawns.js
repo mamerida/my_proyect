@@ -1,5 +1,6 @@
-exports.viewWalls = (pown,finishMoves,side,board,move) =>{
+exports.viewWallsAndMyPawns = (pown,finishMoves,side,board,move) =>{
     //if i want move piece forward . I need verify walls .I need verify my other pieces 
+
     if(move == "up" && (board[pown.row+1][pown.column] == "-" || board[pown.row+2][pown.column] == side)){
         delete finishMoves.up;
     }

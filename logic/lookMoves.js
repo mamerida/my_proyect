@@ -1,30 +1,27 @@
 exports.lookMoves = (position) =>{
     //catch errors 
     if(!position){
-        throw new Error("Error. Need a positions");
-    }
-    if(position.length != 3){
         throw new Error("Error. Wrong input parameters");
     }
 
     //verify posible moves
-    position.forEach(powns => {
-        powns.moves = {};
-        //verifi moves 
-        if(powns.row != 16){
-            powns.moves.up = "up";
+    position.forEach(pawns => {
+        pawns.moves = {};
+        
+        if(  pawns.row != 16){
+            pawns.moves.up = "up";
         }
 
-        if(powns.row != 0){
-            powns.moves.down =  "down";
+        if(pawns.row != 0){
+            pawns.moves.down =  "down";
         }
 
-        if(powns.column != 16){
-            powns.moves.left = "left";
+        if(pawns.column != 16){
+            pawns.moves.left = "left";
         }
 
-        if(powns.column != 0){
-            powns.moves.rigth = "rigth";
+        if(pawns.column != 0){
+            pawns.moves.rigth = "rigth";
         }
     });
 
