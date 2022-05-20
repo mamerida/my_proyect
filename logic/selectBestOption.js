@@ -1,5 +1,5 @@
 
-const {bestPown} = require('../utils/selectBestPown')
+const {bestPawn} = require('../utils/selectBestPawn')
 
 exports.selectBestOption = (finalsMoves) =>{
     let pieceToMove ={}
@@ -24,17 +24,17 @@ exports.selectBestOption = (finalsMoves) =>{
 
     //prefer always advance
     if(canAdvance.length > 0){
-        pieceToMove = bestPown(canAdvance);
+        pieceToMove = bestPawn(canAdvance);
     } 
 
     //in other case move to rigth or left 
     if( canAdvance.length == 0 && moveLeftOrRigth.length > 0){
-        pieceToMove = bestPown(moveLeftOrRigth);
+        pieceToMove = bestPawn(moveLeftOrRigth);
     } 
 
     //or moveDown
     if(canAdvance.length == 0 && moveLeftOrRigth.length == 0 && moveDown.length > 0){
-        pieceToMove = bestPown(moveDown);
+        pieceToMove = bestPawn(moveDown);
    } 
 
     return pieceToMove;

@@ -5,7 +5,7 @@ const {makeBoard} = require('../board/board');
 const {makeRotateBoard} = require('../board/rotateBoard');
 
 //fuction returns pouns position
-const {viewPowns} = require('../logic/viewPiecePosition');
+const {viewPawns} = require('../logic/viewPiecePosition');
 
 //view position in board and return posible moves
 const {lookMoves} = require('../logic/lookMoves');
@@ -19,7 +19,7 @@ const {EdgeOfTable} = require('../logic/EdgeOfTable')
 //view posibility to jump or move diagonally
 const {canJump} = require('../logic/canJump');
 
-//recibe powns and return best option
+//recibe pawns and return best option
 const {selectBestOption} = require('../logic/selectBestOption');
 
 
@@ -43,15 +43,15 @@ exports.myTurn = (message) =>{
     }
 
     //obtain piece position 
-    const position = viewPowns(board, message);
+    const position = viewPawns(board, message);
     
     //look for possible moves in table
     const positionMoves= lookMoves(position);
     
-    //look around for each pown and verify walls and other team pawns
+    //look around for each pawn and verify walls and other team pawns
     const positionsWithOutWalls = searchWalls(board,positionMoves,message.data.side);
 
-    //look around for each pown and verify walls and other team pawns
+    //look around for each pawn and verify walls and other team pawns
     const positionsSpecialCondition = EdgeOfTable(board,positionsWithOutWalls);
 
     //finally look if i can jump or make diagonal move

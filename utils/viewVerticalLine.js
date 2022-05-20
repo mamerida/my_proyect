@@ -11,9 +11,9 @@ exports.viewVerticalLine = (verticialNearWalls,board,other_side) =>{
     board[nearestPawn.column - 1 ].forEach(row => {row == " "  && countEmptySquareRigth++});
 
     if(countEmptySquareLeft == 3 && countEmptySquareLeft  > countEmptySquareRigth){
-        return(nearestPawn)
+        return(nearestPawn);
     }else{
         nearestPawn.row --;
-        return(nearestPawn)
+        return(nearestPawn);
     }
 }

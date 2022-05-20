@@ -2,13 +2,13 @@ const {viewEdge} = require("../utils/viewEnge");
 
 exports.EdgeOfTable = (board,positionMoves) =>{
     //iterate in pieces 
-    positionMoves.forEach(pown => {
-        const finishMoves=pown.moves;
+    positionMoves.forEach(pawn => {
+        const finishMoves=pawn.moves;
         //iterate por moves
-        for (const move  in pown.moves) {
-                viewEdge(pown,finishMoves,board,move)
+        for (const move  in pawn.moves) {
+                viewEdge(pawn,finishMoves,board,move)
         };
-        pown.moves = finishMoves;
+        pawn.moves = finishMoves;
     });
     // return pieces with new possible moves 
     return positionMoves;

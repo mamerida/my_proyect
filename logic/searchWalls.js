@@ -2,13 +2,13 @@ const {viewWallsAndMyPawns} = require('../utils/viewWallsAndMyPawns');
 
 exports.searchWalls = (board,positionMoves,side) =>{
     //iterate in pieces 
-    positionMoves.forEach(pown => {
-        const finishMoves=pown.moves;
+    positionMoves.forEach(pawn => {
+        const finishMoves=pawn.moves;
         //iterate por moves
-        for (const moves  in pown.moves) {
-            viewWallsAndMyPawns(pown,finishMoves,side,board,moves)
+        for (const moves  in pawn.moves) {
+            viewWallsAndMyPawns(pawn,finishMoves,side,board,moves)
         };
-        pown.moves = finishMoves;
+        pawn.moves = finishMoves;
     });
     // return pieces with new possible moves 
     return positionMoves;

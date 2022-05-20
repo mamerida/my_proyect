@@ -1,7 +1,7 @@
 
 
 
-exports.viewPowns = (board, message) =>{
+exports.viewPawns = (board, message) =>{
     //catch errors 
     if(!board){
         throw new Error("Error. Need a board") ;

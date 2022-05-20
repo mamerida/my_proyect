@@ -1,7 +1,7 @@
 //function convert string to matrix
 const {makeBoard} = require('../board/board');
 //fuction returns pouns position
-const {viewPowns} = require('../logic/viewPiecePosition');
+const {viewPawns} = require('../logic/viewPiecePosition');
 //fuction return nearest pawn 
 const {nearPawn} = require('../utils/nearPawn');
 
@@ -23,7 +23,7 @@ exports.myTurnWall = (message) =>{
 
     //obtain enemy piece position 
     message.data.side = other_side;
-    const position = viewPowns(board, message);
+    const position = viewPawns(board, message);
 
     let nearestPawn  = nearPawn(position,other_side);
     
@@ -55,6 +55,7 @@ exports.myTurnWall = (message) =>{
         //message,row,col,direction
         return putWall(message,parseInt((nearestPawn.row /2)- 1) ,parseInt(nearestPawn.column/2),"h")
     }
+    
     return putWall(message,parseInt(nearestPawn.row /2) ,parseInt(nearestPawn.column/2),"h")
 
 }

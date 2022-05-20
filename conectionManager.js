@@ -33,18 +33,15 @@ let moves = 0;
                         responseMove = FactoryServerEvent.myTurnResponsePawn(message); 
                         moves++;
                     }
-                    console.log(message);
                     socket.send(responseMove);
                     break;  
                 case "list_users":
                     FactoryServerEvent.userList(message);
                     break;
                 case "game_over":
-                    console.log("Game Over");
-                    console.log(message);
+                    FactoryServerEvent.gameOver(message);
                     break;
                 default:
-                    console.log(message);
                     break;
             }
         }catch(e){
