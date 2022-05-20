@@ -1,14 +1,8 @@
 exports.viewLine = (nearestPawn,board,other_side) =>{
 
     //catch Errors 
-    if(!nearestPawn){
-        throw new Error("Error need a Pawn");
-    }
-    if(!board){
-        throw new Error("Error need a board");
-    }
-    if(!other_side){
-        throw new Error("Error need the oponent side");
+    if(!nearestPawn || !board  || !other_side){
+        throw new Error("Error Need all the parameters");
     }
     let countEmptySquare = 0;
     let thereAreWall = true;
