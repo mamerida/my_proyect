@@ -1,5 +1,5 @@
     //seach opponent powns front of my piece if there is empy slot i can jump
-    expots.viewOtherPieces = (finishMoves,side,board,moves,pown)=>{
+    exports.viewOtherPieces = (finishMoves,side,board,moves,pown)=>{
 
         if(moves == "up" && pown.row <= 14 ){
             finishMoves.up = pointsOfMoves.up;

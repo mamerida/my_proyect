@@ -46,6 +46,7 @@ let moves = 0;
                     console.log(message);
                     break;
                 default:
+                    console.log(message);
                     break;
             }
         }catch(e){
