@@ -27,29 +27,27 @@ let moves = 0;
                 
                 case "your_turn":
                     //to be able to insert walls generated a turn counter
-                    console.log(message);
                     let responseMove = ""
-                    if(moves == 3 && message.data.walls != 0 ){
+                    if(moves == 2 && message.data.walls != 0 ){
                         responseMove = FactoryServerEvent.myTurnResponseWall(message);
                         moves = 0; 
                     }else{
-                        responseMove = FactoryServerEvent.myTurnResponsePawn(message);
+                        responseMove = FactoryServerEvent.myTurnResponsePawn(message); 
                         moves++;
                     }
+                    console.log(message);
                     socket.send(responseMove);
-                    break;
-    
+                    break;  
                 case "list_users":
                     FactoryServerEvent.userList(message);
                     break;
                 case "game_over":
                     console.log("Game Over");
+                    console.log(message);
                     break;
                 default:
                     break;
             }
-
-
         }catch(e){
             console.log("Error : ",e)
         }

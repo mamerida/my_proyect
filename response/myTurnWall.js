@@ -28,12 +28,12 @@ exports.myTurnWall = (message) =>{
     let nearestPawn  = nearPawn(position,other_side);
     
     //comprobe if i can put a wall front of selected pawn
-    // const isClear  = viewLine(nearestPawn,board,other_side); // return true or false 
+    const isClear  = viewLine(nearestPawn,board,other_side); // return true or false 
 
-    // if(!isClear){
-    //     let newPositios = position.filter(pawn => pawn.row != nearestPawn.row && pawn.column != nearestPawn.column );
-    //     nearestPawn  = nearPawn(newPositios,other_side);
-    // }
+    if(!isClear){
+        let newPositios = position.filter(pawn => pawn.row != nearestPawn.row && pawn.column != nearestPawn.column );
+        nearestPawn  = nearPawn(newPositios,other_side);
+    }
 
     if(other_side == "S"){
         //message,row,col,direction

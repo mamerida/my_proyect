@@ -9,9 +9,9 @@ exports.acceptChallenge = (message) =>{
     }
 
     //use if to prevent challenge of other partner 
-    if(message.data.opponent != "mamerida2013@gmail.com"){
-        throw new Error("im sorry out of service")
-    }
+    // if(message.data.opponent != "mamerida2013@gmail.com"){
+    //     throw new Error("im sorry out of service")
+    // }
     //return response 
     return JSON.stringify({
         action: "accept_challenge", 
