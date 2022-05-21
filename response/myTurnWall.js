@@ -7,6 +7,8 @@ const {nearPawn} = require('../utils/nearPawn');
 
 const {viewLine} = require('../utils/viewLine');
 
+const {viewVerticalLine} = require('../utils/viewVerticalLine');
+
 //call method make message to server
 const{putWall} = require('../moves/putWall')
 
