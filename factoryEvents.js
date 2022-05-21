@@ -8,22 +8,38 @@ const {myTurnWall} = require('./response/myTurnWall');
 
 
 const acceptChallengeResponse = (message) =>{
+    if(!message){
+        throw new Error("Need message")
+    }
     return acceptChallenge(message);
 };
 
 const myTurnResponsePawn = (message) =>{
+    if(!message){
+        throw new Error("Need message")
+    }
     return myTurn(message);
 };
 
-const userList = (message) =>{
-    return console.log(message);
-}
-
 const myTurnResponseWall = (message) =>{
+    if(!message){
+        throw new Error("Need message")
+    }
     return myTurnWall(message);
 };
 
+const userList = (message) =>{
+    if(!message){
+        throw new Error("Need message")
+    }
+    return console.log(message);
+}
+
+
 const gameOver = (message) =>{
+    if(!message){
+        throw new Error("Need message")
+    }
     console.log("-----GAME OVER-----");
     console.log("--FinalScore--");
     console.log("-Player 1-");
