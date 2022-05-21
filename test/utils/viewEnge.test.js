@@ -3,9 +3,11 @@ const {viewEdge} = require('../../utils/viewEnge');
 const finalMoveRigth = {up:"up",left:"left",rigth:"rigth",down:"down"};
 const finalMoveLeft = {up:"up",left:"left",rigth:"rigth",down:"down"};
 const finishMovesUp = {up:"up",left:"left",rigth:"rigth" ,down:"down"};
+const finishMovesCanMoveUp = {up:"up",left:"left",rigth:"rigth" ,down:"down"};
 const pawnRigth ={row:8,column:2};
 const pawnLeft ={row:6,column:14};
 const pawnUp ={row:14,column:8};
+const pawnCanUp ={row:8,column:8};
 const board_array = [
     [' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ',' '],
     [' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ',' '],
@@ -15,7 +17,7 @@ const board_array = [
     [' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ',' '],
     [' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', 'N',' ','S'],
     [' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ',' '],
-    ['S', ' ', 'N', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ',' '],
+    ['S', ' ', 'N', ' ', ' ',' ', ' ', ' ', 'N', ' ',' ', ' ', ' ', ' ', ' ',' ',' '],
     [' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ',' '],
     [' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ',' '],
     [' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ',' '],
@@ -44,5 +46,10 @@ describe(" remove moves from pawns at the edge of the board" , ()=>{
     test("pawn cant move to up", ()=>{
         expect(viewEdge(pawnUp,finishMovesUp,board_array,"up")).toStrictEqual({left: 'left',rigth:"rigth",down:"down"});
     })
+
+    test("pawn can move to up", ()=>{
+        expect(viewEdge(pawnCanUp,finishMovesCanMoveUp,board_array,"up")).toStrictEqual({up:"up",left: 'left',rigth:"rigth",down:"down"});
+    })
+
 
 })
