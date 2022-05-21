@@ -1,8 +1,8 @@
+25 lines (25 sloc)  664 Bytes
+   
 version: 2.1
 jobs:
   build:
-    environment:
-      CC_TEST_REPORTER_ID: d6f118d56811da4d9a9ab66f55d639e789dabb8009e1e523a59f6ec3839a3775
     working_directory: ~/repo
     docker:
       - image: cimg/node:14.18.1
@@ -20,18 +20,6 @@ jobs:
           key: dependency-cache-{{ checksum "package-lock.json" }}
           paths:
             - ./node_modules
-      - run:
-          name: Setup Code Climate test-reporter
-          command: |
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
-      - run:
-          name: Run tests
-          command: |
-            sudo docker-php-ext-enable xdebug
-            ./cc-test-reporter before-build
-            sudo vendor/bin/phpunit --coverage-clover clover.xml
-            ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
       - run:
           name: run space test
           command: npm test
