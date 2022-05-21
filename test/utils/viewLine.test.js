@@ -1,7 +1,7 @@
 const {viewLine} = require('../../utils/viewLine');
 
 
-describe(" funciton returns if its posibble put a wall in selected line" , ()=>{
+describe(" function returns if its posibble put a wall in selected line" , ()=>{
     //nearestPawn,board,other_side
     const nearestPawnN= {row:8,column:8};
     const nearestPawnNWithWalls= {row:10,column:8};
