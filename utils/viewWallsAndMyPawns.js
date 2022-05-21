@@ -1,6 +1,10 @@
 exports.viewWallsAndMyPawns = (pawn,finishMoves,side,board,move) =>{
     //if i want move piece forward . I need verify walls .I need verify my other pieces 
 
+    if(!pawn||!finishMoves||!side||!board||!move ){
+        throw new Error("Error need all parameters");
+    }
+
     if(move == "up" && (board[pawn.row+1][pawn.column] == "-" || board[pawn.row+2][pawn.column] == side)){
         delete finishMoves.up;
     }
