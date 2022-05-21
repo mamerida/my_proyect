@@ -1,6 +1,8 @@
 version: 2.1
 jobs:
   build:
+    environment:
+      CC_TEST_REPORTER_ID: 6eaf156bb462144cefbdf826cf929b1bc618d1b3d9b594468de4fca8cfe7cd44
     working_directory: ~/repo
     docker:
       - image: cimg/node:14.18.1
