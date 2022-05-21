@@ -17,8 +17,7 @@
 
         // can i do diagonal movement
         // verifi if there are opponet pawn and a wall
-        if(moves == "up" && pawn.row <=12 && board[(pawn.row + 1)][pawn.column] == " " && board[(pawn.row + 2)][pawn.column] != " "&& 
-            board[(pawn.row + 3)][pawn.column] != " " ){ 
+        if(moves == "up" && pawn.row <=12 && board[(pawn.row + 1)][pawn.column] == " " && board[(pawn.row + 2)][pawn.column] != " "&& board[(pawn.row + 3)][pawn.column] != " " ){ 
             //Be a wall on rigth side 
             if(board[pawn.row + 1 ][pawn.column - 1 ] == " " ){
                 finishMoves.upRigth = pointsOfMoves.upRigth;

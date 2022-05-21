@@ -2,7 +2,7 @@ exports.viewLine = (nearestPawn,board,other_side) =>{
 
     //catch Errors 
     if(!nearestPawn || !board  || !other_side){
-        throw new Error("Error Need all the parameters");
+        throw new Error("Error need all parameters");
     }
     let countEmptySquare = 0;
     let thereAreWall = true;
