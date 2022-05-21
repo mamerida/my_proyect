@@ -9,7 +9,7 @@ describe(" funciton returns if its posibble put a wall in selected line" , ()=>{
     const nearestPawnSWithWalls= {row:16,column:8};
     const sideNort = "N";
     const sideSouth = "S";
-    const board_arraye = [
+    const board_array = [
         [' ', ' ','N',' ', ' ',  ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ',' ',' ',' '],
         [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',' ', ' ',' ', ' ', ' ',' ',' ',' ', ' '],
         [' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ', ' ', ' ', ' ', ' ',' ',' '],
@@ -36,22 +36,22 @@ describe(" funciton returns if its posibble put a wall in selected line" , ()=>{
 
     test(" can put a wall North ", ()=>{
         //nearestPawn,board,other_side
-        expect(viewLine(nearestPawnN,board_arraye,sideNort)).toBe(true);
+        expect(viewLine(nearestPawnN,board_array,sideNort)).toBe(true);
     })
 
     test(" cant put a wall North ", ()=>{
         //nearestPawn,board,other_side
-        expect(viewLine(nearestPawnNWithWalls,board_arraye,sideNort)).toBe(false);
+        expect(viewLine(nearestPawnNWithWalls,board_array,sideNort)).toBe(false);
     })
 
     test(" can put a wall south ", ()=>{
         //nearestPawn,board,other_side
-        expect(viewLine(nearestPawnS,board_arraye,sideSouth)).toBe(true);
+        expect(viewLine(nearestPawnS,board_array,sideSouth)).toBe(true);
     })
 
     test(" cant put a wall south ", ()=>{
         //nearestPawn,board,other_side
-        expect(viewLine(nearestPawnSWithWalls,board_arraye,sideSouth)).toBe(false);
+        expect(viewLine(nearestPawnSWithWalls,board_array,sideSouth)).toBe(false);
     })
 
 

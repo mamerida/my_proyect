@@ -1,4 +1,4 @@
-const {makeBoard} = require("../board/board")
+const {makeBoard} = require("../../board/board")
 const board="  N     N     N                                                                                                                                                                                                                                                                   S     S     S  ";
 
 const board_array = [
