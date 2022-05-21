@@ -44,7 +44,7 @@ exports.myTurnWall = (message) =>{
     let finalPositionVertical = "";
     if(countFullSqueare>=2){
         const verticialNearWalls = nearPawn(position,other_side);
-        finalPositionVertical  = viewVerticalLine(verticialNearWalls,board,other_side); // return final position
+        finalPositionVertical  = viewVerticalLine(verticialNearWalls,board); // return final position
 
     }
 
