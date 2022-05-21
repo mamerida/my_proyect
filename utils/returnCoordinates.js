@@ -12,8 +12,8 @@ exports.returnCoordinates=(finalsMoves,from_row,from_col)=>{
             to_col = from_col + 1;
             break;  
         case finalsMoves.moves.upRigth === 'upRigth':
-            to_row = from_row - 1;
-            to_col = from_col + 1;
+            to_row = from_row + 1;
+            to_col = from_col - 1;
             break;     
         case finalsMoves.moves.up === "up":
             to_row = from_row + 1;
@@ -27,7 +27,7 @@ exports.returnCoordinates=(finalsMoves,from_row,from_col)=>{
             to_row = from_row;
             to_col = from_col - 1;
             break;  
-        case finalsMoves.moves.rigth === "down":
+        case finalsMoves.moves.down === "down":
             to_row = from_row - 1;
             to_col = from_col;
             break;   
