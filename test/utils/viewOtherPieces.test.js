@@ -3,6 +3,7 @@ const {viewOtherPieces} = require('../../utils/viewOtherPieces');
 describe(" funciton returns final moves after see special move likes jump and jump with walls " , ()=>{
     const firstPawn = {row:2,column:14};
     const finishMovesUp = {};
+    const finishMovesUpJump = {};
     const finishMovesUpRigth = {};
     const finishMovesUpLeft = {};
     const finishMovesLeft = {};
@@ -172,15 +173,15 @@ describe(" funciton returns final moves after see special move likes jump and ju
     })
 
     test("can jump enemy ", ()=>{
-        expect(viewOtherPieces(finishMovesUp,side,board_array_with_Walls,movesUp,firstPawnJump)).toStrictEqual({up: "up",upJump: "upJump"})
+        expect(viewOtherPieces(finishMovesUpJump,side,board_array_with_Walls,movesUp,firstPawnJump)).toStrictEqual({upJump: "upJump"})
     })
 
     test("can jump enemy  to diagonal rigth ", ()=>{
-        expect(viewOtherPieces(finishMovesUpRigth,side,board_array_with_Walls,movesUp,firstPawnDiagonalRigth)).toStrictEqual({up: "up", upRigth: "upRigth"})
+        expect(viewOtherPieces(finishMovesUpRigth,side,board_array_with_Walls,movesUp,firstPawnDiagonalRigth)).toStrictEqual({upRigth: "upRigth"})
     })
 
     test("can jump enemy to  diagonal left ", ()=>{
-        expect(viewOtherPieces(finishMovesUpLeft,side,board_array_with_Walls,movesUp,firstPawnDiagonalLeft)).toStrictEqual({up: "up",upLeft: "upLeft"})
+        expect(viewOtherPieces(finishMovesUpLeft,side,board_array_with_Walls,movesUp,firstPawnDiagonalLeft)).toStrictEqual({upLeft: "upLeft"})
     })
 
 })

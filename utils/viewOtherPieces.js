@@ -6,7 +6,7 @@
             throw new Error("Error need all parameters");
         }
 
-        if(moves == "up" && pawn.row <= 14){
+        if(moves == "up" && pawn.row <= 14 && board[pawn.row + 2][pawn.column] == " "){
             finishMoves.up = pointsOfMoves.up;
         }
 

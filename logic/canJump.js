@@ -1,4 +1,4 @@
-const {viewEdge} = require("../utils/viewOtherPieces");
+const {viewOtherPieces} = require("../utils/viewOtherPieces");
 
 //I see each piece and check if it can jump
 exports.canJump = (board,positions,side) =>{
