@@ -33,7 +33,6 @@ exports.myTurnWall = (message) =>{
     let finalPositionVertical = "";
     if(vertical>2){
         const verticialNearWalls = nearPawn(position,other_side);
-        console.log("AAAAAAAAAAAA",verticialNearWalls);
         finalPositionVertical  = viewVerticalLine(verticialNearWalls,board); // return final position
 
     }
