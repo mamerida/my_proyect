@@ -7,7 +7,7 @@ exports.viewVerticalLine = (verticialNearWalls,board) =>{
     let countEmptySquareLeft = 0;
     let countEmptySquareRigth = 0;
 
-    if(verticialNearWalls == 16){
+    if(verticialNearWalls.row == 16){
         return(verticialNearWalls);
     }
    
