@@ -43,13 +43,13 @@ const gameOver = (message) =>{
     console.log("-----GAME OVER-----");
     console.log("--FinalScore--");
     console.log("-Player 1-");
-    console.log(message.player_1);
+    console.log(message.data.player_1);
     console.log("-Player 1 Score -");
-    console.log(message.score_1);
+    console.log(message.data.score_1);
     console.log("-Player 2-");
-    console.log(message.player_2);
+    console.log(message.data.player_2);
     console.log("-Player 2 Score -");
-    console.log(message.score_2);
+    console.log(message.data.score_2);
     return ;
 };
 

@@ -1,11 +1,8 @@
 exports.nearPawn= (position,side) =>{
 
     //catch Errors 
-    if(!position){
-        throw new Error("Error need a position");
-    }
-    if(!side){
-        throw new Error("Error need a side");
+    if(!position || !side){
+        throw new Error("Error need all parameters");
     }
 
     let nearPawn = position[0]

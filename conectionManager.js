@@ -26,13 +26,16 @@ let moves = 0;
                 case "your_turn":
                     //to be able to insert walls generated a turn counter
                     let responseMove = ""
-                    if(moves == 2 && message.data.walls != 0 ){
+                    if(moves == 3 && message.data.walls != 0 ){
                         responseMove = FactoryServerEvent.myTurnResponseWall(message);
                         moves = 0; 
                     }else{
                         responseMove = FactoryServerEvent.myTurnResponsePawn(message); 
                         moves++;
                     }
+                    console.log("++++++++++++++++++++++++++++++++++++++++++++")
+                    console.log(responseMove)
+                    console.log("score 1",message.data.score_1,"---- score 2",message.data.score_2)
                     socket.send(responseMove);
                     break;  
                 case "list_users":
