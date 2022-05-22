@@ -29,23 +29,11 @@ exports.myTurnWall = (message) =>{
     
     const [nearPawnWithOutWalls,vertical] = viewLine(position,board,other_side); 
 
-    // let nearestPawn  = nearPawn(position,other_side);
-    
-    // //comprobe if i can put a wall front of selected pawn
-    // let isClear  = viewLine(nearestPawn,board,other_side); // return true or false 
-    // let countFullSqueare = 0;
-
-    // if(!isClear){
-    //     let newPositios = position.filter(pawn => pawn.row != nearestPawn.row && pawn.column != nearestPawn.column );
-    //     nearestPawn  = nearPawn(newPositios,other_side);
-    //     isClear = viewLine(nearestPawn,board,other_side);
-    //     countFullSqueare++;
-    // }
-
     //if i cant putl horizontal wall  I will put vertical call
     let finalPositionVertical = "";
     if(vertical>2){
         const verticialNearWalls = nearPawn(position,other_side);
+        console.log("AAAAAAAAAAAA",verticialNearWalls);
         finalPositionVertical  = viewVerticalLine(verticialNearWalls,board); // return final position
 
     }
