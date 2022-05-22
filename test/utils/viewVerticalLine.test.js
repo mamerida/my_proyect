@@ -213,7 +213,7 @@ const board_array_with_walls = [
 ];
 
 describe(" funciton returns pawn that is going to be placed vertical wall  " , ()=>{
-    test("with out message", ()=>{
+    test("without message", ()=>{
         expect(()=>{viewVerticalLine()}).toThrow(new Error("Error need all parameters"))
     })
 

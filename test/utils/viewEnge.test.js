@@ -31,7 +31,7 @@ const board_array = [
 
 describe(" remove moves from pawns at the edge of the board" , ()=>{
 
-    test("with out message", ()=>{
+    test("without message", ()=>{
         expect(()=>{viewEdge()}).toThrow(new Error("Error need all parameters"))
     })
     //pawn,finishMoves,board,move
