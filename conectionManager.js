@@ -33,7 +33,9 @@ let moves = 0;
                         responseMove = FactoryServerEvent.myTurnResponsePawn(message); 
                         moves++;
                     }
-                    console.log(message)
+                    console.log("++++++++++++++++++++++++++++++++++++++++++++")
+                    console.log(responseMove)
+                    console.log("score 1",message.data.score_1,"---- score 2",message.data.score_2)
                     socket.send(responseMove);
                     break;  
                 case "list_users":

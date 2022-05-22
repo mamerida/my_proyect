@@ -23,7 +23,7 @@ exports.viewVerticalLine = (verticialNearWalls,board) =>{
         //put wall on rigth
         return(verticialNearWalls);
     }else{
-        verticialNearWalls.column -= 1;
+        verticialNearWalls.column = verticialNearWalls.column - 1;
         return(verticialNearWalls);
     }
 }
