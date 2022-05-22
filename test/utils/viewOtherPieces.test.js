@@ -149,7 +149,7 @@ describe(" funciton returns final moves after see special move likes jump and ju
     ];
 
 
-    test("with out message", ()=>{
+    test("without message", ()=>{
         expect(()=>{viewOtherPieces()}).toThrow(new Error("Error need all parameters"))
     })
 

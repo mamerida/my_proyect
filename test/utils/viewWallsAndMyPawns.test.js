@@ -226,7 +226,7 @@ const board_array = [
 
 
 describe("view Walls and my Pawns " , ()=>{
-    test("with out message", ()=>{
+    test("without message", ()=>{
         expect(()=>{viewWallsAndMyPawns()}).toThrow(new Error("Error need all parameters"))
     })
 

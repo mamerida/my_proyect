@@ -3,7 +3,7 @@ const {nearPawn} = require('../../utils/nearPawn');
 
 describe(" function returns near pown of board" , ()=>{
 
-    test("with out message", ()=>{
+    test("without message", ()=>{
         expect(()=>{nearPawn()}).toThrow(new Error("Error need all parameters"))
     })
 

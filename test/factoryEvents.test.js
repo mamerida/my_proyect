@@ -2,7 +2,7 @@ const {FactoryServerEvent} = require('../factoryEvents');
 
 describe("Response of acceptChallengeResponse " , ()=>{
 
-    test("with out response", ()=>{
+    test("without response", ()=>{
         expect(()=>{FactoryServerEvent.acceptChallengeResponse()}).toThrow(new Error("Need message"))
     } )
 
@@ -10,7 +10,7 @@ describe("Response of acceptChallengeResponse " , ()=>{
 
 describe("Response of myTurnResponsePawn" , ()=>{
 
-    test("with out response", ()=>{
+    test("without response", ()=>{
         expect(()=>{FactoryServerEvent.myTurnResponsePawn()}).toThrow(new Error("Need message"))
     } )
 
@@ -18,7 +18,7 @@ describe("Response of myTurnResponsePawn" , ()=>{
 
 describe("Response of myTurnResponseWall " , ()=>{
 
-    test("with out response", ()=>{
+    test("without response", ()=>{
         expect(()=>{FactoryServerEvent.myTurnResponseWall()}).toThrow(new Error("Need message"))
     } )
 
@@ -32,7 +32,7 @@ describe("Response of userList " , ()=>{
         }
     };
 
-    test("with out response", ()=>{
+    test("without response", ()=>{
         expect(()=>{FactoryServerEvent.userList()}).toThrow(new Error("Need message"))
     } )
 
@@ -44,7 +44,7 @@ describe("Response of userList " , ()=>{
 
 describe("Response of gameOver " , ()=>{
     
-    test("with out response", ()=>{
+    test("without response", ()=>{
         expect(()=>{FactoryServerEvent.gameOver()}).toThrow(new Error("Need message"))
     } )
 

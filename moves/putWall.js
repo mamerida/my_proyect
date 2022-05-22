@@ -2,11 +2,15 @@ exports.putWall = (message,rowTo,colTo,direction)=>{
 
     //Catch and returns erros 
     if(!message || rowTo == null  || colTo == null || !direction ){
-        throw new Error("Error missing elements ") 
+        throw new Error("Error need all parameters") 
     }
     // prevent pass letters or simbos to server 
     if(isNaN(rowTo) || isNaN(colTo)){
         throw new Error("Error some of the coordinates are not numbers")
+    }
+    const directionArray = ["v","h"]
+    if(directionArray.indexOf(direction) == -1){
+        throw new Error("Error wrong direction")
     }
 
     //return JSON with accion 
