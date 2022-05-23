@@ -1,6 +1,6 @@
 <h2 align="center"> Hi, I'm Mario Merida 👋 <br/> </h2> 
 
-Im Mario Merida . I have 26 years old and I am fullstack developer with React,NodeJs,express and MySql. Also I have experience with VueJs, SqlServer and Python.
+Im Mario Merida I have 26 years old and I am fullstack developer with React,NodeJs,express and MySql. Also I have experience with VueJs, SqlServer and Python.
 
 ## About Game :clipboard:
 
@@ -34,7 +34,7 @@ The bot use **webSocket with ws** to play with differents opponents at same time
 <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/git.png" alt=git width="50" height="50"/>
 <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/github.png" alt=github width="50" height="50"/>
 </p>
-**Env to use token **
+**Env to use token**
 
 ## How to play :game_die:
 
