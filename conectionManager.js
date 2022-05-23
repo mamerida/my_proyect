@@ -32,10 +32,6 @@ socket.on('open', function open() {
                         responseMove = FactoryServerEvent.myTurnResponsePawn(message); 
                         moves++;
                     }
-                    console.log("++++++++++++++++++++++++++++++++++++++++++++")
-                    console.log(responseMove)
-                    console.log("player 1",message.data.player_1,"---- player 2",message.data.player_2)
-                    console.log("score 1",message.data.score_1,"---- score 2",message.data.score_2)
                     socket.send(responseMove);
                     break;  
                 case "list_users":
