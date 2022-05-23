@@ -3,12 +3,8 @@
 
 exports.viewPawns = (board, message) =>{
     //catch errors 
-    if(!board){
-        throw new Error("Error. Need a board") ;
-    }
-
-    if(!message || !message.data.side ){
-        throw new Error("Error. Wrong message") ;
+    if(!board || !message){
+        throw new Error("Error wrong parameters") ;
     }
 
     //get my side of board
