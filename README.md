@@ -42,7 +42,7 @@ The bot use **webSocket with ws** to play with differents opponents at same time
 ```
 TOKEN=<YOURTOKEN>
 ```
-2) Install/Update node package json with in your favorite terminal 
+2) Install/Update node package json in your favorite terminal execute
 ```
 npm install
 ```
@@ -60,5 +60,5 @@ npm test
 
 If you want to know more about me . Visit my other social networks
  [![Linkedin Badge](https://img.shields.io/badge/-Mario_AMerida-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mario-merida-36a04319b/)](https://www.linkedin.com/in/mario-merida-36a04319b/)
-Or send email
-or [![Gmail Badge](https://img.shields.io/badge/-mamerida2018@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mamerida2018@gmail.com)](mailto:mamerida2018@gmail.com)
+Or send me an email
+[![Gmail Badge](https://img.shields.io/badge/-mamerida2018@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mamerida2018@gmail.com)](mailto:mamerida2018@gmail.com)
