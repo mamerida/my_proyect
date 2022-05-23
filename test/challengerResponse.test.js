@@ -26,7 +26,7 @@ describe("Accept Challenge" , ()=>{
     })
 
     test("reject challenger without message" , ()=>{
-        expect(()=>{acceptChallenge()}).toThrow(new Error("Error. Need a message"))
+        expect(()=>{acceptChallenge()}).toThrow(new Error("Need message"))
     })
 
 })

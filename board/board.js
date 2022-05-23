@@ -1,16 +1,13 @@
+const {errorCodes} = require('../constants/errors');
 
-
-exports.makeBoard = (board) =>{
-    
+exports.makeBoard = (board) =>{    
     if(!board || board.length != 289){
-        throw new Error("Error in board string")
+        throw new Error(errorCodes.errorBoard)
     }
     //convert string to array
     const  messageBoard=  Array.from(board);
-
     let finalBoard = [];
     let index = 0;
-
     //create columns of my board
     for(let i = 0; i < 17 ; i++){
         
@@ -24,7 +21,6 @@ exports.makeBoard = (board) =>{
     }
 
     return finalBoard
-
 }
 
 

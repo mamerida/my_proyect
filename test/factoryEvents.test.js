@@ -42,8 +42,7 @@ describe("Response of userList " , ()=>{
 
 })
 
-describe("Response of gameOver " , ()=>{
-    
+describe("Response of gameOver " , ()=>{   
     test("without response", ()=>{
         expect(()=>{FactoryServerEvent.gameOver()}).toThrow(new Error("Need message"))
     } )

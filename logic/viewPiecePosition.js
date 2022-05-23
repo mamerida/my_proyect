@@ -1,18 +1,14 @@
-
-
+const {errorCodes} = require('../constants/errors');
 
 exports.viewPawns = (board, message) =>{
     //catch errors 
     if(!board || !message){
-        throw new Error("Error wrong parameters") ;
+        throw new Error(errorCodes.wrongParameters) ;
     }
-
     //get my side of board
     const my_side = message.data.side;
-    
     //make a response
     const piecePosition =[]
-    
     //find my pieces on the board and return rows and columns of each
     board.forEach((row, indexRow) => {
         row.forEach((column,indexColum) => {
@@ -24,6 +20,5 @@ exports.viewPawns = (board, message) =>{
             }
         });
     });
-
     return piecePosition
 }

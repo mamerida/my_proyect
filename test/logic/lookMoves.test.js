@@ -4,7 +4,7 @@ const {lookMoves} = require('../../logic/lookMoves');
 describe(" function returns posible moves per pawn considering pawn position on board " , ()=>{
 
     test("without message", ()=>{
-        expect(()=>{lookMoves()}).toThrow(new Error("Error. Wrong input parameters"))
+        expect(()=>{lookMoves()}).toThrow(new Error("Error wrong parameters"))
     })
 
     test("without down move", ()=>{

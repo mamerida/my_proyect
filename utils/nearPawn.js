@@ -1,10 +1,10 @@
-exports.nearPawn= (position,side) =>{
+const {errorCodes} = require('../constants/errors');
 
+exports.nearPawn= (position,side) =>{
     //catch Errors 
     if(!position || !side){
-        throw new Error("Error need all parameters");
+        throw new Error(errorCodes.messageErrorParameters);
     }
-
     let nearPawn = position[0]
     //verify if my opponet have S i will put a wall front of  pawn with smaller row
     position.forEach(pawn => {
@@ -14,7 +14,5 @@ exports.nearPawn= (position,side) =>{
                 nearPawn = pawn;
         }
     });
-
     return nearPawn;
-
 }

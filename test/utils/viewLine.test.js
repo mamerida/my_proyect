@@ -121,7 +121,4 @@ describe(" function returns if its posibble put a wall in selected line" , ()=>{
     test("with pawns South Side on Edge Board", ()=>{
         expect(viewLine(pawns_S_Edge,board_array_Edge_S,sideSouth)).toStrictEqual([{"column": 8, "row": 14}, 0])
     })
-
-
-
 })
