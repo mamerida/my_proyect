@@ -11,7 +11,8 @@ by moving your pawns and making it difficult for the enemy to advance by placing
 
 ## Tecnologies 🛠️
 To Continuous Integration I used CircleCi
-[![CircleCI](https://circleci.com/<VCS>/<ORG_NAME>/<PROJECT_NAME>.svg?style=svg&circle-token=<YOUR_STATUS_API_TOKEN>)](<LINK>)
+
+[![CircleCI](https://circleci.com/pipelines/github/mamerida/qouEdaProject.svg?style=svg&circle-token=<cdae9f24553e98a26776051913bd90f37be23852>)](<LINK>)
 
 
 The bot use webSocket to play with differents opponents
