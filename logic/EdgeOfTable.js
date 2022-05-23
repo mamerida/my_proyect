@@ -12,5 +12,4 @@ exports.EdgeOfTable = (board,positionMoves) =>{
     });
     // return pieces with new possible moves 
     return positionMoves;
-
 }

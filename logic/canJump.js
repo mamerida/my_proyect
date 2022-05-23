@@ -8,8 +8,7 @@ exports.canJump = (board,positions,side) =>{
         for (const moves  in pawn.moves) {         
             viewOtherPieces(finishMoves,side,board,moves,pawn)
         };
-        pawn.moves = finishMoves;
-        
+        pawn.moves = finishMoves;      
     });
     return(positions);
 }

@@ -1,11 +1,10 @@
-
+const {errorCodes} = require('../constants/errors');
 
 //create function to response a challenge
 exports.acceptChallenge = (message) =>{
-
     //comprobe challenge_id to prevent send a response without challenge_id
     if(!message || !message.data.challenge_id){
-        throw new Error("Error. Need a message")
+        throw new Error(errorCodes.messageErrorMesagge)
     }
 
     //use if to prevent challenge of other partner 
@@ -20,5 +19,4 @@ exports.acceptChallenge = (message) =>{
             "challenge_id": message.data.challenge_id
         }
     })
-
 }

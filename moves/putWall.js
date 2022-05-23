@@ -1,18 +1,18 @@
-exports.putWall = (message,rowTo,colTo,direction)=>{
+const {errorCodes} = require('../constants/errors');
 
+exports.putWall = (message,rowTo,colTo,direction)=>{
     //Catch and returns erros 
     if(!message || rowTo == null  || colTo == null || !direction ){
-        throw new Error("Error need all parameters") 
+        throw new Error(errorCodes.messageErrorParameters) 
     }
     // prevent pass letters or simbos to server 
     if(isNaN(rowTo) || isNaN(colTo)){
-        throw new Error("Error some of the coordinates are not numbers")
+        throw new Error(errorCodes.errorNumbers)
     }
     const directionArray = ["v","h"]
-    if(directionArray.indexOf(direction) == -1){
-        throw new Error("Error wrong direction")
+    if(directionArray.indexOf(direction) == -1 ){
+        throw new Error(errorCodes.wrongDirection)
     }
-
     //return JSON with accion 
     return JSON.stringify({
         action: "wall", 

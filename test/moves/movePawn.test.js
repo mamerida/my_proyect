@@ -24,7 +24,7 @@ describe(" function return a message with panw move to send to server  " , ()=>{
     })
 
     test("with wrong coordinates", ()=>{
-        expect(()=>{movePawn(message,"a",3,"b",2)}).toThrow(new Error("Error some of the coordinates are not numbers "))
+        expect(()=>{movePawn(message,"a",3,"b",2)}).toThrow(new Error("Error some of the coordinates are not numbers"))
     })
     
     test("without message but yes with numbers", ()=>{
