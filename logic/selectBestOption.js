@@ -22,10 +22,12 @@ exports.selectBestOption = (finalsMoves) =>{
         }
     });
 
+
     //prefer always advance
     if(canAdvance.length > 0){
         pieceToMove = bestPawn(canAdvance);
     } 
+    
 
     //in other case move to rigth or left 
     if( canAdvance.length == 0 && moveLeftOrRigth.length > 0){
