@@ -9,7 +9,7 @@ This proyect consist in a bot capable of playing Quoridor.
 Quoridor is a board game where your goal is to get as many points as possible 
 by moving your pawns and making it difficult for the enemy to advance by placing walls
 
-####  The one with the highest score wins.
+####  Whoever has the highest score in 200 turns wins.
 
 ## Tecnologies ⚙️
 To Continuous Integration I used CircleCi
