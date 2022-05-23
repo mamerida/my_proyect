@@ -1,5 +1,7 @@
 <h2 align="center"> Hi, I'm Mario Merida 👋 <br/> </h2> 
 
+Im Mario Merida . I have 26 years old and I am fullstack developer with React,NodeJs,express and MySql. Also I have experience with VueJs, SqlServer and Python.
+
 ## About Game :clipboard:
 
 This proyect consist in a bot capable of playing Quoridor.
@@ -22,7 +24,7 @@ And Jest fot test
 
 [![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
 
-The bot use **webSocket** to play with differents opponents at same time.
+The bot use **webSocket with ws** to play with differents opponents at same time.
 
 ## Tools 🛠️
 <p align="left">
@@ -32,5 +34,31 @@ The bot use **webSocket** to play with differents opponents at same time.
 <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/git.png" alt=git width="50" height="50"/>
 <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/github.png" alt=github width="50" height="50"/>
 </p>
+**Env to use token **
 
 ## How to play :game_die:
+
+1) create **.env file** in proyect root with this format :
+```
+TOKEN=<YOURTOKEN>
+```
+2) Install/Update node package json with in your favorite terminal 
+```
+npm install
+```
+3) To start bot and play only need execute 
+```
+npm start
+```
+
+Test) If you want see the unittesting only execute
+```
+npm test
+```
+
+## Next Steps :footprints:
+
+If you want to know more about me . Visit my other social networks
+ [![Linkedin Badge](https://img.shields.io/badge/-Aman_Ansari-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mario-merida-36a04319b/)](https://www.linkedin.com/in/mario-merida-36a04319b/)
+Or send email
+or [![Gmail Badge](https://img.shields.io/badge/-aman.atg001@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mamerida2018@gmail.com)](mailto:mamerida2018@gmail.com)
