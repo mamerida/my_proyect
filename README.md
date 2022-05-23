@@ -59,6 +59,6 @@ npm test
 ## Next Steps :footprints:
 
 If you want to know more about me . Visit my other social networks
- [![Linkedin Badge](https://img.shields.io/badge/-Aman_Ansari-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mario-merida-36a04319b/)](https://www.linkedin.com/in/mario-merida-36a04319b/)
+ [![Linkedin Badge](https://img.shields.io/badge/-Mario_AMerida-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mario-merida-36a04319b/)](https://www.linkedin.com/in/mario-merida-36a04319b/)
 Or send email
-or [![Gmail Badge](https://img.shields.io/badge/-aman.atg001@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mamerida2018@gmail.com)](mailto:mamerida2018@gmail.com)
+or [![Gmail Badge](https://img.shields.io/badge/-mamerida2018@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mamerida2018@gmail.com)](mailto:mamerida2018@gmail.com)
