@@ -1,6 +1,6 @@
 <h2 align="center"> Hi, I'm Mario Merida 👋 <br/> </h2> 
 
-## About Game clipboard
+## About Game :clipboard:
 
 This proyect consist in a bot capable of playing Quoridor.
 
