@@ -1,6 +1,6 @@
-<h2 align="center"> Hi, I'm Mario Merida 👋 <br/> </h2> 
+<h2 align="center"> Hi, Im Mario Merida 👋 <br/> </h2> 
 
-Im Mario Merida I have 26 years old and I am fullstack developer with React,NodeJs,express and MySql. Also I have experience with VueJs, SqlServer and Python.
+Im Mario Merida I have 26 years old and I am fullstack developer with React, NodeJs, express and MySql. Also I have experience with VueJs, SqlServer and Python.
 
 ## About Game :clipboard:
 
@@ -34,15 +34,14 @@ The bot use **webSocket with ws** to play with differents opponents at same time
 <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/git.png" alt=git width="50" height="50"/>
 <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/github.png" alt=github width="50" height="50"/>
 </p>
-**Env to use token**
 
 ## How to play :game_die:
 
-1) create **.env file** in proyect root with this format :
+1) create **.env file** in proyect root with this format:
 ```
 TOKEN=<YOURTOKEN>
 ```
-2) Install/Update node package json in your favorite terminal execute
+2) Install/Update node package json in your favorite terminal. Execute:
 ```
 npm install
 ```
@@ -51,7 +50,7 @@ npm install
 npm start
 ```
 
-Test) If you want see the unittesting only execute
+Test) If you want see the unit testing only execute
 ```
 npm test
 ```
@@ -59,6 +58,6 @@ npm test
 ## Next Steps :footprints:
 
 If you want to know more about me . Visit my other social networks
- [![Linkedin Badge](https://img.shields.io/badge/-Mario_AMerida-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mario-merida-36a04319b/)](https://www.linkedin.com/in/mario-merida-36a04319b/)
+ [![Linkedin Badge](https://img.shields.io/badge/-Mario_A_Merida-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mario-merida-36a04319b/)](https://www.linkedin.com/in/mario-merida-36a04319b/)
 Or send me an email
 [![Gmail Badge](https://img.shields.io/badge/-mamerida2018@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:mamerida2018@gmail.com)](mailto:mamerida2018@gmail.com)
