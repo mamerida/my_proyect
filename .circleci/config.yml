@@ -8,7 +8,12 @@ jobs:
       - image: cimg/node:14.18.1
     steps:
       - checkout
-      - codecov/upload
+      - run:
+          name: Install Codecov
+          command: |
+            curl -Os https://uploader.codecov.io/latest/linux/codecov
+            chmod +x codecov  
+            ./codecov
       - run:
           name: update npm
           command: "sudo npm install --unsafe-perm -g expo-cli"
