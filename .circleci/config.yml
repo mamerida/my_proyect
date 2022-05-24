@@ -1,6 +1,4 @@
 version: 2.1
-orbs:
-  codecov: codecov/codecov@3.1.1
 jobs:
   build:
     working_directory: ~/repo
@@ -8,12 +6,6 @@ jobs:
       - image: cimg/node:14.18.1
     steps:
       - checkout
-      - run:
-          name: Install Codecov
-          command: |
-            curl -Os https://uploader.codecov.io/latest/linux/codecov
-            chmod +x codecov  
-            ./codecov
       - run:
           name: update npm
           command: "sudo npm install --unsafe-perm -g expo-cli"
