@@ -1,6 +1,8 @@
 version: 2.1
 jobs:
   build:
+    environment:
+        CC_TEST_REPORTER_ID: 10850591f7af4a46e32c310ac6850423ab7f04a0edfa7330d705df668ec01442
     working_directory: ~/repo
     docker:
       - image: cimg/node:14.18.1
@@ -9,6 +11,12 @@ jobs:
       - run:
           name: update npm
           command: "sudo npm install --unsafe-perm -g expo-cli"
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+          # download test reporter as a static binary
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
