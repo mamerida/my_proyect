@@ -8,6 +8,7 @@ jobs:
       - image: cimg/node:14.18.1
     steps:
       - checkout
+      - codecov/upload
       - run:
           name: update npm
           command: "sudo npm install --unsafe-perm -g expo-cli"
@@ -25,7 +26,4 @@ jobs:
           command: npm test
       - store_artifacts:
           path: ~/repo/space
-upload-to-codecov:
-    jobs:
-      - checkout
-      - codecov/upload
+      
