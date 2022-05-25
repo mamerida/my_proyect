@@ -21,7 +21,7 @@ exports.selectBestOption = (finalsMoves) =>{
             moveDown.push(pawn)
         }
     });
-    //prefer always advance
+    //prefert always advance
     if(canAdvance.length > 0){
         pieceToMove = bestPawn(canAdvance);
     } 
