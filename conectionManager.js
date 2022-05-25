@@ -1,7 +1,7 @@
 //use dotenv to protect my token when upload to github
 //and if Its necesarry change on environment i will can change the token or anything in .env fije 
-require('dotenv').config()
-const {WebSocket} = require("ws")
+require('dotenv').config();
+const {WebSocket} = require("ws");
 //import factory with different response about message
 const {FactoryServerEvent} = require("./factoryEvents");
 
@@ -25,7 +25,7 @@ socket.on('open', function open() {
                 case "your_turn":
                     //to be able to insert walls generated a turn counter
                     let responseMove = ""
-                    if(moves == 4 && message.data.walls != 0 ){
+                    if(moves == 3 && message.data.walls != 0 ){
                         responseMove = FactoryServerEvent.myTurnResponseWall(message);
                         moves = 0; 
                     }else{
@@ -35,7 +35,7 @@ socket.on('open', function open() {
                     socket.send(responseMove);
                     break;  
                 case "list_users":
-                    FactoryServerEvent.userList(message);
+                    // FactoryServerEvent.userList(message);
                     break;
                 case "game_over":
                     FactoryServerEvent.gameOver(message);
