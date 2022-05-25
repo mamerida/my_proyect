@@ -1,6 +1,7 @@
 const {pointsOfMoves} = require('../constants/pontsPerMove');
 
 exports.returnCoordinates=(finalsMoves,from_row,from_col)=>{
+    //depende of move and initial position return final position of pawns
     let to_row = 0;
     let to_col = 0;
     switch(true){

@@ -34,7 +34,6 @@ exports.myTurnWall = (message) =>{
         return putWall(message,parseInt((finalPositionVertical.row /2)) ,parseInt(finalPositionVertical.column/2),"v")
     }
     if(other_side == "S"){
-        //message,row,col,direction
         return putWall(message,parseInt((nearPawnWithOutWalls.row /2)- 1) ,parseInt(nearPawnWithOutWalls.column/2),"h")
     }
     return putWall(message,parseInt(nearPawnWithOutWalls.row /2) ,parseInt(nearPawnWithOutWalls.column/2),"h")
