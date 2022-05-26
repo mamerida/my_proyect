@@ -28,7 +28,7 @@ CodeClimate to Code Quality
 
 And Jest fot test
 
-[![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
+[![tested with jest](https://img.shields.io/badge/tested_with-jest-99424f.svg)](https://github.com/facebook/jest)
 
 The bot use **webSocket with ws** to play with differents opponents at same time.
 
