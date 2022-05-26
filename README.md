@@ -13,7 +13,7 @@ There are 3 pawns and 10 walls per person
 
 To play need go to https://ks75kyhz75.execute-api.us-east-1.amazonaws.com/ and create a user.
 
-Once inside , go to Challenge , turn on the bot , select your oponent and ####enjoy!
+Once inside , go to Challenge , turn on the bot , select your oponent and enjoy!
 
 
 
