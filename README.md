@@ -41,7 +41,7 @@ The bot use **webSocket with ws** to play with differents opponents at same time
 <img style="margin: auto;" src="https://raw.githubusercontent.com/sachinverma53121/sachinverma53121/master/icons/github.png" alt=github width="50" height="50"/>
 </p>
 
-## How to play :game_die:
+## How to turn on the bot :game_die:
 
 1) create **.env file** in proyect root with this format:
 ```
