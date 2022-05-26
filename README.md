@@ -7,9 +7,15 @@ I'm Mario Merida I have 26 years old and I'm fullstack developer with React, Nod
 This proyect consist in a bot capable of playing Quoridor.
 
 Quoridor is a board game where your goal is to get as many points as possible 
-by moving your pawns and making it difficult for the enemy to advance by placing walls
-
+by moving your pawns and making it difficult for the enemy to advance by placing walls.
+There are 3 pawns and 10 walls per person
 ####  Whoever has the highest score in 200 turns wins.
+
+To play need go to https://ks75kyhz75.execute-api.us-east-1.amazonaws.com/ and create a user.
+
+Once inside , go to Challenge , turn on the bot , select your oponent and #### enjoy!
+
+
 
 ## Tecnologies ⚙️
 To Continuous Integration I used CircleCi
