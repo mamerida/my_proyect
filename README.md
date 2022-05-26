@@ -1,6 +1,6 @@
-<h2 align="center"> Hi, Im Mario Merida 👋 <br/> </h2> 
+<h2 align="center"> Hi, I'm Mario Merida 👋 and this is Quoridor :video_game: <br/> </h2> 
 
-Im Mario Merida I have 26 years old and I am fullstack developer with React, NodeJs, express and MySql. Also I have experience with VueJs, SqlServer and Python.
+I'm Mario Merida I have 26 years old and I'm fullstack developer with React, NodeJs, express and MySql. Also I have experience with VueJs, SqlServer and Python.
 
 ## About Game :clipboard:
 
